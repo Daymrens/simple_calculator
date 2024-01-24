@@ -55,7 +55,9 @@ namespace simple_calculator
             label1.Visible = true;
         }
 
-
-       
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
