@@ -17,7 +17,7 @@ namespace simple_calculator
         {
             InitializeComponent();
         }
-
+        
         private void CalculatorMain_Load(object sender, EventArgs e)
         {
 
@@ -54,5 +54,8 @@ namespace simple_calculator
             textBox.Text = "";
             label1.Visible = true;
         }
+
+
+       
     }
 }

@@ -15,7 +15,7 @@ namespace simple_calculator
         private string currInput = "";
         private double result = 0;
         private string operation = "";
-
+        
 
         public Form1()
         {
@@ -28,6 +28,7 @@ namespace simple_calculator
             Button button = (Button)sender;
             currInput += button.Text;
             UpdateDisplay();
+            txtBox.ForeColor = Color.White;
         }
         private void btnOperator_Click(object sender, EventArgs e)
         {
@@ -50,6 +51,7 @@ namespace simple_calculator
 
                 currInput = "";
                 UpdateDisplay();
+                txtBox.ForeColor = Color.White;
             }
         }
 
@@ -63,6 +65,7 @@ namespace simple_calculator
                 UpdateDisplay();
                 result = 0;
                 operation = "";
+                _updateResultColor();
             }
         }
 
@@ -103,15 +106,47 @@ namespace simple_calculator
             result = 0;
             operation = "";
             UpdateDisplay();
+            Console.ResetColor();
         }
         private void UpdateDisplay()
         {
             txtBox.Text = currInput;
+            
         }
-
+        private void _updateResultColor()
+        {
+            try
+            {
+                if(result < 0)
+                {
+                    txtBox.ForeColor = Color.Red;
+                    
+                    
+                }
+            }
+            catch
+            {
+                txtBox.ForeColor = Color.White;
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEquals_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtBox_TextChanged(object sender, EventArgs e)
+        {
+            _updateResultColor();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
