@@ -16,11 +16,20 @@ namespace simple_calculator
         public CalculatorMain()
         {
             InitializeComponent();
+            textBox.KeyDown += TextBox_KeyDown;
         }
         
         private void CalculatorMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                _ProceedtoNewForm();
+            }
         }
 
         private void btnShowtxtbox_Click(object sender, EventArgs e)
@@ -29,6 +38,9 @@ namespace simple_calculator
             textBox.Size = new Size(281, 44);
             textBox.Location = new Point(30, 96);
             textBox.Font = new Font("Segoe UI",24);
+            textBox.BackColor = Color.FromArgb(50, 53, 56);
+            textBox.ForeColor = Color.White;
+            textBox.UseSystemPasswordChar = true;
             this.Controls.Add(textBox);
             label1.Visible = false;
            
@@ -44,7 +56,7 @@ namespace simple_calculator
             }
             else
             {
-                MessageBox.Show("hHy");
+                MessageBox.Show("Error, Enter the right code!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -58,6 +70,11 @@ namespace simple_calculator
         private void btnExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

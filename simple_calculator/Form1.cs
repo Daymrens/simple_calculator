@@ -148,5 +148,10 @@ namespace simple_calculator
         {
             Environment.Exit(0);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

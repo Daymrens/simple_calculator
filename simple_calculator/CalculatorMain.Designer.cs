@@ -44,6 +44,7 @@
             this.label1.Size = new System.Drawing.Size(255, 50);
             this.label1.TabIndex = 1;
             this.label1.Text = "CALCULATOR";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnShowtxtbox
             // 
@@ -53,7 +54,7 @@
             this.btnShowtxtbox.ForeColor = System.Drawing.Color.White;
             this.btnShowtxtbox.Location = new System.Drawing.Point(27, 321);
             this.btnShowtxtbox.Name = "btnShowtxtbox";
-            this.btnShowtxtbox.Size = new System.Drawing.Size(75, 61);
+            this.btnShowtxtbox.Size = new System.Drawing.Size(114, 115);
             this.btnShowtxtbox.TabIndex = 2;
             this.btnShowtxtbox.Text = "SHOW";
             this.btnShowtxtbox.UseVisualStyleBackColor = false;
@@ -65,9 +66,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(233, 321);
+            this.button2.Location = new System.Drawing.Point(186, 321);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 61);
+            this.button2.Size = new System.Drawing.Size(114, 115);
             this.button2.TabIndex = 3;
             this.button2.Text = "HIDE";
             this.button2.UseVisualStyleBackColor = false;
@@ -101,6 +102,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CalculatorMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CalculatorMain";
             this.Load += new System.EventHandler(this.CalculatorMain_Load);
             this.ResumeLayout(false);
