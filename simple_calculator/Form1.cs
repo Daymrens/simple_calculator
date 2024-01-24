@@ -138,7 +138,7 @@ namespace simple_calculator
         {
             
         }
-
+        
         private void txtBox_TextChanged(object sender, EventArgs e)
         {
             _updateResultColor();
